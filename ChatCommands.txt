@@ -1,5 +1,6 @@
 Interact with my stream with the following chat commands:
 
+  ** note: all commands start with an exclamation point **
 
 Command        	Description
 
