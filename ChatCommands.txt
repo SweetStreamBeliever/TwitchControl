@@ -1,0 +1,10 @@
+Interact with my stream with the following chat commands:
+
+
+Command        	Description
+
+!ff             Final Fantasy victory song will play
+!barrett        Bored Barrett from FF sings the victory song
+!nukecage       Wicked crazy Nuke Cage goes nuclear
+!sweetstream    SweetStreamBelieve song and video play
+!randomgif      Random GIFs will be shown on screen
