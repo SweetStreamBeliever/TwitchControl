@@ -1,3 +1,6 @@
+---------------------------------------------------------------
+---------------------------------------------------------------
+
 Interact with my stream with the following chat commands:
 
   ** note: all commands start with an exclamation point **
@@ -9,3 +12,11 @@ Command        	Description
 !nukecage       Wicked crazy Nuke Cage goes nuclear
 !sweetstream    SweetStreamBelieve song and video play
 !randomgif      Random GIFs will be shown on screen
+
+
+
+
+
+
+---------------------------------------------------------------
+---------------------------------------------------------------
