@@ -14,8 +14,24 @@ Command        	Description
 !randomgif      Random GIFs will be shown on screen
 
 
+---------------------------------------------------------------
+---------------------------------------------------------------
 
+Change the color of the lights in my room with the following chat commands:
 
+Command         Description
+
+!red
+!green
+!blue
+!pink
+!purple
+!aqua
+!orange
+!yellow
+!flash          Flash Red (more colors if I purchase the app)
+!police         Cop car comes inside my house
+!rgb            Flash Red, Green, Blue
 
 
 ---------------------------------------------------------------
