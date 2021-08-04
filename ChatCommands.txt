@@ -30,8 +30,9 @@ Command         Description
 !orange
 !yellow
 !flash          Flash Red (more colors if I purchase the app)
-!police         Cop car comes inside my house
+!cops           Cop car comes inside my house
 !rgb            Flash Red, Green, Blue
+!bumpin         Start the party
 
 
 ---------------------------------------------------------------
