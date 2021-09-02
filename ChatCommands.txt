@@ -8,10 +8,12 @@ Interact with my stream by typing the following chat commands:
 Command        	Description
 
 !ff             Final Fantasy victory song will play
-!barrett        Bored Barrett from FF sings the victory song
+!barret         Bored Barret from FF sings the victory song
 !nukecage       Wicked crazy Nuke Cage goes nuclear
 !sweetstream    SweetStreamBeliever music video plays
 !randomgif      Random GIFs will be shown on screen
+!pog            POG emotes show in chat
+!fish           Used when I forget something seconds later
 
 
 ---------------------------------------------------------------
@@ -26,9 +28,10 @@ Command         Description
 !blue
 !pink
 !purple
-!aqua
+!aqua           Includes a special treat
 !orange
 !yellow
+!black
 !flash          Flash Red (more colors if I purchase the app)
 !cops           Cop car comes inside my house
 !rgb            Flash Red, Green, Blue
