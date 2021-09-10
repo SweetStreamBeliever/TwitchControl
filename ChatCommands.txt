@@ -14,6 +14,7 @@ Command        	Description
 !randomgif      Random GIFs will be shown on screen
 !pog            POG emotes show in chat
 !fish           Used when I forget something seconds later
+!theydied       You were doing well until everyone died
 
 
 ---------------------------------------------------------------
