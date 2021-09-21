@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family={fontFamily}&display=swap');
+
+:root {
+  --maxWidth: {chatwidth}px; /* 200 to 900 steps of 10 */
+
+  --fromSize: {fromSize}px; /* Min 12 max 64 */
+  --textAlign: {textAlign}; /* right or left */
+  --padding: 16px; /* not an option */
+  --messageSize: {messageSize}px; /* Min 12 max 64 */
+  --messageColor: {messageColor};
+
+  --padding: 16px; /* min 6 max 50 */
+  --borderRadius: {borderRadius}px; /* min 0 max 40 */
+
+  --chatBgColor: {chatBgColor};
+  --fontFamily: '{fontFamily}', sans-serif;
+
+  --fromTransform: {fromTransform}; /* uppercase or normal */
+  --messageTransform: {messageTransform};
+
+  --dotScale: calc({dotScale} *.01);
+  --shadowBrightness: {shadowBrightness}%; /* 80 to 120 - lower than 100 darkens, higher than 100 ligthens */
+
+  --timeSize: {timeSize}px;
+  --timeColor: {timeColor};
+  --showTime: {showTime}; /* visible or hidden */
+}
+
+body {
+  background: #333;
+  font-family: var(--fontFamily);
+  font-size: var(--fromSize);
+  text-align: var(--textAlign);
+  word-break: break-all;
+}
+
+#log {
+  display: table;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  padding: 15px;
+  width: 100%;
+  table-layout: fixed;
+  z-index: -1;
+}
+
+#log .emote {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 0.4em 0.2em;
+  position: relative;
+  opacity: 1;
+}
+
+#log .emote img {
+  display: inline-block;
+  position: relative;
+  height: .7em;
+  width: var(--fromSize);
+  opacity: 0;
+}
+
+.badge {
+  display: inline-block;
+  margin-right: 0.2em;
+  position: relative;
+  height: auto;
+  width: var(--fromSize);
+  vertical-align: middle;
+  top: -0.1em;
+}
+
+.useCustomNameColor .meta *{
+  color: {nameColor} !important;
+}
+
+#measureBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: var(--padding);
+  background: red;
+  opacity: 0;
+  z-index: 999;
+}
+
+.chatMsg {
+  display: block;
+  max-width: var(--maxWidth);
+  overflow: hidden;
+  position: relative;
+  transform-origin: left calc((var(--fromSize) + var(--padding)) / 2);
+  opacity: 0;
+  display: inline-block;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+  margin:
+}
+
+svg {
+  width: 80px;
+  height: 2160px;
+  position: absolute;
+  left: -74px;
+  top: -50px;
+}
+
+.dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.dotHolder {
+  position: absolute;
+  top: 0;
+  left: calc(var(--padding) / 2);
+  transform-origin: center center;
+  transform: scale(.8);
+}
+
+.dot {
+  position: absolute;
+  display: inline-block;
+  border-radius: 100%;
+  background: #FFF;
+  z-index: 100;
+  transform-origin: center center;
+  transform: scale(var(--dotScale));
+  left: 50%;
+  top: 0;
+}
+
+.accentBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1000px;
+  height: 100%;
+  z-index: 50;
+}
+
+.accentShadowBg {
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 1000px;
+  height: 100%;
+  z-index: 45;
+  filter: brightness(var(--shadowBrightness));
+}
+
+.particles {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 900px;
+  height: 900px;
+  z-index: 55;
+}
+
+.innerChat {
+  position: relative;
+  z-index: 30;
+  padding: var(--padding);
+}
+
+.chatBg {
+  position: absolute;
+  top: 0;
+  left: -1050px;
+  width: 980px;
+  height: 100%;
+  background: var(--chatBgColor);
+  z-index: 25;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+}
+
+.inner {
+  position: relative;
+  z-index: 99;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+}
+
+.time {
+  font-size: var(--timeSize);
+  color: var(--timeColor);
+  position: relative;
+  margin: 4px 0;
+  padding: 0 var(--padding);
+  visibility: var(--showTime);
+}
+
+.message, .message div, .message span {
+  z-index: 999;
+  position: relative;
+  text-transform: var(--messageTransform);
+}
+
+/* change optimizations */
+.accentBg svg, .accentShadowBg svg, .chatMsg, .accentBg, .particles, .accentShadowBg, .chatBg {
+  will-change: transform;
+}
+
+.chatMsg, .showDot, .particles, .meta, .meta div {
+  will-change: opacity;
+}
+
+.name {
+  text-transform: var(--fromTransform);
+}
+
+.message {
+  color: var(--messageColor);
+}
+.dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.dotHolder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 60px;
+  transform-origin: center center;
+  transform: scale(.8);
+}
+
+.dot {
+  position: absolute;
+  display: inline-block;
+  border-radius: 100%;
+  background: #FFF;
+  z-index: 100;
+  transform-origin: center center;
+  transform: translateY(-50%) scale(var(--dotScale));
+  top: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.showDot:nth-child(1) .dot {
+  left: 10px;
+}
+
+.showDot:nth-child(2) .dot {
+  left: 75px;
+}
+
+.showDot:nth-child(3) .dot {
+  left: 140px;
+}
+
+.fullMessage {
+  margin: 20px;
+}
+
+.rgbOn {
+  -webkit-animation: hue 20s infinite;
+  /* Just for nathan :) */
+}
+
+@-webkit-keyframes hue {
+  0%, 100%  { -webkit-filter: hue-rotate(0deg); }
+  50% { -webkit-filter: hue-rotate(360deg); }
+}
+/* Use Static Colors */
+
+.useCustomNameColor .meta {
+	color: {nameColor} !important;
+}
+
+.useCustomNameColor .accentBg {
+	background: {nameColor} !important;
+}
+
+.useCustomNameColor .accentBg svg, .useCustomNameColor .accentShadowBg, .useCustomNameColor .accentShadowBg svg {
+	fill: {nameColor} !important;
+}
+
+#log>div{
+    animation:fadeOut 0.5s ease {message_hide_delay} forwards;
+    -webkit-animation: fadeOut 0.5s ease {message_hide_delay} forwards;
+}

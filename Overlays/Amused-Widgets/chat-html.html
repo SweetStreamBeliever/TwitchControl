@@ -1,0 +1,47 @@
+<div id="log" class="sl__chat__layout {useNameColor}"></div>
+<!-- can exist anywhere, used to measure height with text -->
+<div id="measureBox">X</div>
+<!-- chat item -->
+<script type="text/template" id="chatlist_item">
+<div class="fullMessage" data-from="{from}" data-id="{messageId}">
+  <div class="chatMsg">
+    <div class="innerChat">
+      <div class="chatBg"></div>
+      <span class="{customNameColor} inner">
+        <span class="meta" style="color: {color};">
+          <span class="badges"></span>
+          <span class="name">{from}</span>
+          <span class="separator">:</span>
+        </span>
+        <span class="message">{message}</span>
+      </span>
+    </div>
+    <div class="accentClip">
+      <div class="accentBg {rgbOn}" style="background: {color}">
+        <svg viewBox="0 0 80 2160" style="fill: {color}">
+          <path d="M5.1,1687.9c30.1-59.7-11.3-81.3,7.1-121.7c18.6-34.4-8.5-79.8,10.6-114.3c19.1-37.4-14.4-63.9,0.2-121.3c0-0.1,0.6-1.9,0.7-2.5c9.6-44.6-21.9-82.3-10.9-126.5c12.8-41-10.2-73.9-0.4-121.7s-11.8-75.7,2.4-109.5c23-43.2-9-76.8,1.2-118c11-40.9-19.6-79.5-8.9-120.7c11.4-40.6-18.7-84.7-2.1-123.9c30.1-59.7-11.3-81.3,7.1-121.7c18.6-34.4-8.5-79.8,10.6-114.3C42,334.6,8.4,308,23.1,250.7c0-0.1,0.6-1.9,0.7-2.5c9.6-44.6-21.9-82.3-10.9-126.5C25.6,80.7-5.7,40.1,8,0l72,0v1080v1080H12.4c6.3-35.2-11.8-75.7,2.4-109.5c23-43.2-9-76.8,1.2-118c11-40.9-19.6-79.5-8.9-120.7C18.6,1771.2-11.5,1727.2,5.1,1687.9z"/>
+        </svg>
+      </div>
+      <div class="dots">
+        <div class="dotHolder">
+          <span class="showDot"><span class="dot"></span></span>
+          <span class="showDot"><span class="dot"></span></span>
+          <span class="showDot"><span class="dot"></span></span>
+        </div>
+      </div>
+      <div class="accentShadowBg {rgbOn}" style="fill: {color}">
+        <svg viewBox="0 0 80 2160" style="fill: {color}">
+          <path d="M5.1,1687.9c30.1-59.7-11.3-81.3,7.1-121.7c18.6-34.4-8.5-79.8,10.6-114.3c19.1-37.4-14.4-63.9,0.2-121.3c0-0.1,0.6-1.9,0.7-2.5c9.6-44.6-21.9-82.3-10.9-126.5c12.8-41-10.2-73.9-0.4-121.7s-11.8-75.7,2.4-109.5c23-43.2-9-76.8,1.2-118c11-40.9-19.6-79.5-8.9-120.7c11.4-40.6-18.7-84.7-2.1-123.9c30.1-59.7-11.3-81.3,7.1-121.7c18.6-34.4-8.5-79.8,10.6-114.3C42,334.6,8.4,308,23.1,250.7c0-0.1,0.6-1.9,0.7-2.5c9.6-44.6-21.9-82.3-10.9-126.5C25.6,80.7-5.7,40.1,8,0l72,0v1080v1080H12.4c6.3-35.2-11.8-75.7,2.4-109.5c23-43.2-9-76.8,1.2-118c11-40.9-19.6-79.5-8.9-120.7C18.6,1771.2-11.5,1727.2,5.1,1687.9z"/>
+        </svg>
+      </div>
+    </div>
+    <canvas class="particles"></canvas>
+  </div>
+  <div class="time"></div>
+</div>
+</script>
+<script>
+  if (!window.NerdLoader) {
+window.NerdLoader = class NerdLoader{constructor(){this.resources={}}async load(assets=[]){const scripts=[],images=[],sounds=[],videos=[],jsons=[];return assets.forEach(asset=>{"string"==typeof asset&&(asset={name:asset,url:asset}),asset.name||(asset.name=asset.url);const ext=((asset.url||"").match(/\.([^.]*?)(?=\?|#|$)/)||[])[1];/(js)$/.test(ext)?scripts.push(asset):/(jpe?g|gif|png|svg|webp)$/.test(ext)?images.push(asset):/(3gp|mpg|mpeg|mp4|m4v|m4p|ogv|ogg|mov|webm)$/.test(ext)?videos.push(asset):/(mp3)$/.test(ext)?sounds.push(asset):/(json)$/.test(ext)&&jsons.push(asset)}),await Promise.all(scripts.map(asset=>this.loadScript(asset))),window.gsap&&window.gsap.globalTimeline.getChildren().forEach(animation=>animation.kill()),await Promise.all([...sounds.map(asset=>this.loadSound(asset)),...videos.map(asset=>this.loadVideo(asset)),...images.map(asset=>this.loadImage(asset)),...jsons.map(asset=>this.loadJson(asset))]),this.resources}loadJson({name:name,url:url}){return new Promise(async(resolve,reject)=>{const cachedUrl=await this.checkCache(url),response=await fetch(cachedUrl),json=await response.json();this.resources[name]=json,resolve(json)})}loadImage({name:name,url:url}){return new Promise(async(resolve,reject)=>{const cachedUrl=await this.checkCache(url),imageElement=new Image;function fulfill(){imageElement.onload=null,imageElement.onerror=null,resolve(imageElement)}imageElement.crossOrigin="Anonymous",imageElement.src=cachedUrl,this.resources[name]=imageElement,imageElement.complete?resolve(imageElement):(imageElement.onload=fulfill,imageElement.onerror=fulfill)})}loadVideo({name:name,url:url,target:target}){return new Promise(async(resolve,reject)=>{const cachedUrl=await this.checkCache(url),mediaElement=document.querySelector(target)||document.createElement("video");function fulfill(){return mediaElement.oncanplaythrough=null,mediaElement.onerror=null,resolve(mediaElement)}mediaElement.muted=!0,mediaElement.crossOrigin="Anonymous",mediaElement.src=cachedUrl,this.resources[name]=mediaElement,mediaElement.readyState>3?resolve(mediaElement):(mediaElement.oncanplaythrough=fulfill,mediaElement.onerror=fulfill)})}loadScript({name:name,url:url}){return new Promise(async(resolve,reject)=>{const cachedUrl=await this.checkCache(url),scriptElements=Array.from(document.querySelectorAll("script"));let script=scriptElements.filter(scriptElement=>scriptElement.src===cachedUrl)[0];if(script)return fulfill();function fulfill(){return script.onload=null,script.onerror=null,resolve(script)}script=document.createElement("script"),document.head.appendChild(script),this.resources[name]=script,script.onerror=fulfill,script.onload=fulfill,script.src=cachedUrl})}loadSound({name:name,url:url}){return new Promise(async(resolve,reject)=>{const cachedUrl=await this.checkCache(url),sound=new Howl({src:cachedUrl,autoplay:!1,mute:!0,onloaderror:()=>resolve(sound),onload:()=>resolve(sound)});this.resources[name]=sound})}checkCache(url){return new Promise((resolve,reject)=>{console.log("*** Checking cache",url),fetch(url).then(()=>resolve(url)).catch(()=>{if(-1!==url.indexOf("nocache"))return reject(`Cache failed: ${String(url)}`);resolve(this.checkCache(`${url}?_nocache=${this.uniqueID()}`))})})}uniqueID(){return Date.now()+Math.random().toString(16).slice(2)}static async load(assets){return(new NerdLoader).load(assets)}}
+  }
+</script>
