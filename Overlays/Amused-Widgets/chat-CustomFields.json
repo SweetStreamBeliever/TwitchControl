@@ -1,0 +1,221 @@
+{
+  "fontFamily": {
+    "label": "From Font Family",
+    "type": "fontpicker",
+    "value": "Fredoka One",
+    "group": "From and Message Settings"
+  },
+  "useNameColor": {
+    "label": "Select how you want to display colors for your username and accents.",
+    "type": "dropdown",
+    "options": {
+      "cycleColors": "Cycle",
+      "": "Use Viewer Chat Name Color",
+      "useCustomNameColor": "Static Color"
+    },
+    "value": "cycleColors",
+    "group": "From and Message Settings"
+  },
+  "nameColor": {
+    "label": "Custom Username Color",
+    "type": "colorpicker",
+    "value": "#FF53A0 ",
+    "group": "From and Message Settings"
+  },
+  "fromSize": {
+    "group": "From and Message Settings",
+    "label": "From Font Size",
+    "type": "slider",
+    "name": "",
+    "value": 24,
+    "max": 60,
+    "min": 10,
+    "steps": 2
+  },
+  "fromWeight": {
+    "group": "From and Message Settings",
+    "label": "From Font Weight - Thickness of font",
+    "type": "dropdown",
+    "options": {
+      "100": "Thin (100)",
+      "300": "Light (300)",
+      "400": "Regular (400)",
+      "500": "Medium (500)",
+      "700": "Bold (700)",
+      "900": "Black (900)"
+    },
+    "value": "400"
+  },
+  "fromTransform": {
+    "label": "Text Transform",
+    "type": "dropdown",
+    "options": {
+      "uppercase": "Uppercase",
+      "normal": "Normal"
+    },
+    "value": "normal",
+    "group": "From and Message Settings"
+  },
+  "messageColor": {
+    "group": "From and Message Settings",
+    "label": "Message Color",
+    "type": "colorpicker",
+    "value": "#000000"
+  },
+  "messageSize": {
+    "group": "From and Message Settings",
+    "label": "Message Font Size",
+    "type": "slider",
+    "name": "",
+    "value": 24,
+    "max": 60,
+    "min": 10,
+    "steps": 2
+  },
+  "messageWeight": {
+    "group": "From and Message Settings",
+    "label": "Message Font Weight - Thickness of font",
+    "type": "dropdown",
+    "options": {
+      "100": "Thin (100)",
+      "300": "Light (300)",
+      "400": "Regular (400)",
+      "500": "Medium (500)",
+      "700": "Bold (700)",
+      "900": "Black (900)"
+    },
+    "value": "400"
+  },
+  "messageTransform": {
+    "label": "Text Transform",
+    "type": "dropdown",
+    "options": {
+      "uppercase": "Uppercase",
+      "normal": "Normal"
+    },
+    "value": "normal",
+    "group": "From and Message Settings"
+  },
+  "chatwidth": {
+    "group": "Layout and Color Options",
+    "label": "Chat Max Width",
+    "type": "slider",
+    "name": "",
+    "value": 900,
+    "max": 900,
+    "min": 200,
+    "steps": 10
+  },
+  "borderRadius": {
+    "group": "Layout and Color Options",
+    "label": "Border Radius",
+    "type": "slider",
+    "name": "",
+    "value": 30,
+    "max": 40,
+    "min": 0,
+    "steps": 1
+  },
+  "shadowBrightness": {
+    "group": "Layout and Color Options",
+    "label": "Shadow Accent Brightness (lower than 100 darkens, higher than 100 ligthens)",
+    "type": "slider",
+    "name": "",
+    "value": 80,
+    "max": 120,
+    "min": 0,
+    "steps": 1
+  },
+  "chatBgColor": {
+    "group": "Layout and Color Options",
+    "label": "Chat Background Color",
+    "type": "colorpicker",
+    "value": "#FFFFFF"
+  },
+  "dotScale": {
+    "group": "Layout and Color Options",
+    "label": "Dot Indicator Size",
+    "type": "slider",
+    "name": "",
+    "value": 60,
+    "max": 100,
+    "min": 0,
+    "steps": 1
+  },
+  "textAlign": {
+    "group": "Layout and Color Options",
+    "label": "Text Align (Left or right)",
+    "type": "dropdown",
+    "options": {
+      "left": "Left",
+      "right": "Right"
+    },
+    "value": "left"
+  },
+  "timeSize": {
+    "group": "Layout and Color Options",
+    "label": "Time Font Size",
+    "type": "slider",
+    "name": "",
+    "value": 18,
+    "max": 32,
+    "min": 12,
+    "steps": 1
+  },
+  "timeColor": {
+    "group": "Layout and Color Options",
+    "label": "Time Color",
+    "type": "colorpicker",
+    "value": "#FFFFFF"
+  },
+  "showTime": {
+    "group": "Layout and Color Options",
+    "label": "Hide Timestamp",
+    "type": "dropdown",
+    "options": {
+      "visible": "Visible",
+      "hidden": "Hidden"
+    },
+    "value": "visible"
+  },
+  "rgbOn": {
+    "group": "Layout and Color Options",
+    "label": "Enable RGB",
+    "type": "dropdown",
+    "options": {
+      "": "No",
+      "rgbOn": "Yes"
+    },
+    "value": "No"
+  },
+  "cycle1": {
+    "group": "Cycle Color",
+    "label": "Color - 1",
+    "type": "colorpicker",
+    "value": "#7100E5"
+  },
+  "cycle2": {
+    "group": "Cycle Color",
+    "label": "Color - 2",
+    "type": "colorpicker",
+    "value": "#00d031"
+  },
+  "cycle3": {
+    "group": "Cycle Color",
+    "label": "Color - 3",
+    "type": "colorpicker",
+    "value": "#0090FF"
+  },
+  "cycle4": {
+    "group": "Cycle Color",
+    "label": "Color - 4",
+    "type": "colorpicker",
+    "value": "#FF177F"
+  },
+  "cycle5": {
+    "group": "Cycle Color",
+    "label": "Color - 5",
+    "type": "colorpicker",
+    "value": "#FF4200"
+  }
+}

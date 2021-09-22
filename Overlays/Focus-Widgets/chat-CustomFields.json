@@ -1,0 +1,116 @@
+{
+  "fontFamily": {
+    "label": "Font Family",
+    "type": "fontpicker",
+    "value": "Roboto"
+  },
+  "textAlign": {
+    "label": "Text Align",
+    "type": "dropdown",
+    "options": {
+      "left": "Left",
+      "right": "Right"
+    },
+    "value": "left"
+  },
+  "displayType": {
+    "label": "Display Type",
+    "type": "dropdown",
+    "options": {
+      "block": "Full Width",
+      "inline-block": "Partial Width"
+    },
+    "value": "inline-block"
+  },
+  "customNameColor": {
+    "label": "Do you want to use a custom name color (overrides default style)",
+    "type": "dropdown",
+    "options": {
+      "defaultColor": "No",
+      "customColor": "Yes"
+    },
+    "value": "defaultColor"
+  },
+  "nameColor": {
+    "label": "Custom Names Color",
+    "type": "colorpicker",
+    "value": "#000000"
+  },
+  "separator": {
+    "label": "Separator",
+    "type": "textfield",
+    "value": ":"
+  },
+  "bgColor": {
+    "label": "Background Color",
+    "type": "colorpicker",
+    "value": "#FFFFFF"
+  },
+  "bgOpacity": {
+    "label": "Background Opacity",
+    "type": "slider",
+    "name": "",
+    "value": 100,
+    "max": 100,
+    "min": 0,
+    "steps": 1
+  },
+  "spacing": {
+    "label": "Spacing between messages",
+    "type": "slider",
+    "name": "",
+    "value": 5,
+    "max": 20,
+    "min": 0,
+    "steps": 1
+  },
+  "fromWeight": {
+    "label": "Tag Font Weight - Thickness of font",
+    "type": "dropdown",
+    "options": {
+      "100": "Thin (100)",
+      "300": "Light (300)",
+      "400": "Regular (400)",
+      "500": "Medium (500)",
+      "700": "Bold (700)",
+      "900": "Black (900)"
+    },
+    "value": "300"
+  },
+  "barsAnimation": {
+    "label": "Bars Animation Direction",
+    "type": "dropdown",
+    "options": {
+      "fromLeft": "From Left",
+      "fromTop": "From Top",
+      "fromRight": "From Right",
+      "fromBot": "From Bottom"
+    },
+    "value": "fromBot"
+  },
+  "msgDirection": {
+    "label": "Message Animation Origin - The direction the message line animation starts at",
+    "type": "dropdown",
+    "options": {
+      "fromLeft": "From Left",
+      "fromTop": "From Top",
+      "fromRight": "From Right",
+      "fromBot": "From Bottom",
+      "none": "None"
+    },
+    "value": "fromRight"
+  },
+  "messageWeight": {
+    "label": "Message Font Weight - Thickness of font",
+    "type": "dropdown",
+    "options": {
+      "100": "Thin (100)",
+      "300": "Light (300)",
+      "400": "Regular (400)",
+      "500": "Medium (500)",
+      "700": "Bold (700)",
+      "900": "Black (900)"
+    },
+    "value": "300"
+  }
+}

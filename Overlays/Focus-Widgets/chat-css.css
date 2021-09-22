@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family={fontFamily}:100,300,400,500,700,900');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  padding: 0;
+
+  font-family: {
+    fontFamily
+  }
+
+  , sans-serif;
+  font-weight: 700;
+
+  font-size: {
+    font_size
+  }
+
+  ;
+  line-height: 1.5em;
+
+  color: {
+    text_color
+  }
+
+  ;
+}
+
+body, #log {
+  text-align: {
+    textAlign
+  }
+
+  ;
+}
+
+:root {
+  --fromWeight: {
+    fromWeight
+  }
+
+  ;
+
+  --messageWeight: {
+    messageWeight
+  }
+
+  ;
+  --borderSize: 0px;
+  --borderRadius: 14px;
+
+  --bgColor: {
+    bgColor
+  }
+
+  ;
+
+  --bgOpacity: calc( {
+      bgOpacity
+    }
+
+    * .01);
+}
+
+.colon {
+  display: none;
+}
+
+#log {
+  display: table;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.innerChat {
+  margin: 0px;
+
+  display: {
+    displayType
+  }
+
+  ;
+  padding: 10px 20px;
+  word-break: break-all;
+  position: relative;
+}
+
+#log>div.deleted {
+  visibility: hidden;
+}
+
+#log .emote {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 0.4em 0.2em;
+  position: relative;
+}
+
+#log .emote img {
+  display: inline-block;
+  position: relative;
+  height: 1em;
+  opacity: 0;
+}
+
+#log .meta {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 99;
+  font-weight: var(--fromWeight);
+}
+
+#log .customColor {
+  color: {
+    nameColor
+  }
+
+   !important;
+}
+
+#log .message {
+  word-wrap: break-word;
+  position: relative;
+  z-index: 99;
+  font-weight: var(--messageWeight);
+}
+
+.badge {
+  display: inline-block;
+  margin-right: 0.2em;
+  position: relative;
+  height: 1em;
+  vertical-align: middle;
+  top: -0.1em;
+}
+
+.name {
+  margin-left: 0.2em;
+}
+
+.chatMsg {
+  position: relative;
+
+  margin-top: {
+    spacing
+  }
+
+  px;
+  opacity: 0;
+}
+
+.chatBg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: var(--bgColor);
+  opacity: var(--bgOpacity);
+  z-index: 1;
+}
+
+#log>div {
+  animation:fadeOut 0.5s ease {
+    message_hide_delay
+  }
+
+  forwards;
+
+  -webkit-animation: fadeOut 0.5s ease {
+    message_hide_delay
+  }
+
+  forwards;
+}

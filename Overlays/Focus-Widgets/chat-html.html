@@ -1,0 +1,25 @@
+<!-- item will be appened to this layout -->
+<div id="log" class="sl__chat__layout">
+</div>
+
+<!-- chat item -->
+<script type="text/template" id="chatlist_item">
+  <div class="chatMsg" data-from="{from}" data-id="{messageId}">
+  <div class="innerChat">
+<div class="backgroundHolder">
+  <div class="chatBg"></div>
+
+</div>
+    <span class="meta {customNameColor}" style="color: {color}">
+      <span class="inner">
+        <span class="badges"></span>
+        <span class="name">{from}</span>
+        <span class="separator">{separator}</span>
+      </span>
+    </span>
+    <span class="message rightMsg">
+      <span class="inner">{message}</span>
+    </span>
+  </div>
+</div>
+</script>
