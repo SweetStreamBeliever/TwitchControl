@@ -15,6 +15,13 @@ Command        	Description
 !pog            POG emotes show in chat
 !fish           Used when I forget something seconds later
 !theydied       You were doing well until everyone died
+!cockass
+!robocop
+!party
+!sixflags
+!cccp
+!pacino
+!barbie
 
 
 ---------------------------------------------------------------
