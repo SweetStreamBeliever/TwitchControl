@@ -20,8 +20,14 @@ Command        	Description
 !party
 !sixflags
 !cccp
-!pacino
-!barbie
+!pacino         Don't wast my time
+!barbie         I'm a barbie girl
+!blast          blast your way outta there
+!2t2t           Toot Toot!
+!chuga          chugachugachugachuga toot toot
+!charlie        charlie is everywhere
+!bgs            Blood, Guts, Spit
+!pig            Ahhhhhhhh! Die, Pig, Die!
 
 
 ---------------------------------------------------------------
