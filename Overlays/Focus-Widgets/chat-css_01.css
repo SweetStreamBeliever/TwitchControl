@@ -111,7 +111,7 @@ body, #log {
 .name {
   /* Adds border behind Viewer Name and adjusts margin to fit in border */
   margin-left: -13px;
-  background: #FBB8FF;
+  background: #F8E0FF;
   border: 2px solid #AA65BC;
   border-radius: 14px;
   padding: 1px 6px;

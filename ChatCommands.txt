@@ -28,6 +28,12 @@ Command        	Description
 !charlie        charlie is everywhere
 !bgs            Blood, Guts, Spit
 !pig            Ahhhhhhhh! Die, Pig, Die!
+!tidus
+!laugh
+!nothing
+!dosomething
+!please
+!iloveyou
 
 
 ---------------------------------------------------------------
