@@ -48,14 +48,16 @@ Command         Description
 !blue
 !pink
 !purple
-!aqua           Includes a special treat
+!aqua
 !orange
 !yellow
 !black
-!flash          Flash Red (more colors if I purchase the app)
-!cops           Cop car comes inside my house
+!flash          Flash Red
+!cops           call the cops
+!police         call the cops
 !rgb            Flash Red, Green, Blue
 !bumpin         Start the party
+!random         random color
 
 
 ---------------------------------------------------------------
